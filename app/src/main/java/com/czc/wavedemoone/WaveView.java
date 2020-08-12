@@ -14,6 +14,10 @@ import android.view.animation.LinearInterpolator;
 
 import androidx.annotation.Nullable;
 
+/**
+ * 学习使用的加速动画
+ * @time 2020.8.12
+ */
 public class WaveView extends View {
     private Paint wPaintWave;//波浪画笔
     private Paint wPaintProgress;//进度画笔
@@ -131,6 +135,7 @@ public class WaveView extends View {
         invalidate();
         StartWaveAnim();
     }
+    //开始画布动画
     @SuppressLint("ObjectAnimatorBinding")
     public void StartWaveAnim(){
         wWaveobjectAnimator = ObjectAnimator.ofFloat(this, "wave", 0, wItemWaveLength).setDuration(4000);
